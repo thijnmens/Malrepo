@@ -1,16 +1,75 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply bg-gray-900 text-gray-200;
+  font-family: 'Roboto', sans-serif;
+}
+.image-showcase {
+  margin: -16px -8px;
+	position: relative;
+	float: left;
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	-o-perspective: 600px;
+	-ms-perspective: 600px;
+	perspective: 600px;
+	z-index: 1;
+	-webkit-transform: translateZ(0px);
+	-moz-transform: translateZ(0px);
+	-o-transform: translateZ(0px);
+	-ms-transform: translateZ(0px);
+	transform: translateZ(0px);	
+	transition: all 0.4s ease-in-out;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.showcase-grid {
+  @apply grid gap-4 m-16;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
 }
 
-* {
-  box-sizing: border-box;
+.showcase-flip-card {
+  background-color: transparent;
+  width: 225px;
+  height: 320px;
+  perspective: 1000px;
+}
+
+.showcase-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.showcase-flip-card:hover .showcase-flip-card-inner {
+  transform: rotateY(-180deg);
+}
+
+.showcase-flip-card-front, .showcase-flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.showcase-flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.showcase-flip-card-back {
+  @apply bg-gray-800;
+  transform: rotateY(-180deg);
+}
+
+.showcase-flip-card-blur {
+  width: 100%;
+  height: 100%;
+  
 }
