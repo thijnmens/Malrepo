@@ -2,8 +2,7 @@
 	"name": "malrepo",
 	"private": true,
 	"scripts": {
-		"dev": "next dev & echo $! > .pid",
-		"stop": "kill $(cat .pid)",
+		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint"
