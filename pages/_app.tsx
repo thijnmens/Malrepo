@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import * as gtag from '../libs/gtag';
+import Footer from '../components/footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
@@ -40,6 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 			/>
 			<Navbar />
 			<Component {...pageProps} />
+			<Footer />
 		</>
 	);
 }
