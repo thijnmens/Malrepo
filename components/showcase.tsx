@@ -11,7 +11,7 @@ const Showcase = (props: props) => {
 		<div className="showcase-grid">
 			{props.items.map((item, index) => {
 				return (
-					<Link key={index} href={`/anime/${item.user_id}`} passHref>
+					<Link key={index} href={`/theme/${item.user_id}`} passHref>
 						<div className="showcase-flip-card">
 							<div className="showcase-flip-card-inner">
 								<div className="showcase-flip-card-front rounded-lg">

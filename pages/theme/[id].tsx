@@ -14,7 +14,7 @@ export const getServerSideProps: GetServerSideProps = async (context: any) => {
 	return { props: { data: jsondata, file: jsonfile } };
 };
 
-const Anime: NextPage = ({
+const Theme: NextPage = ({
 	data,
 	file,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
@@ -36,7 +36,7 @@ const Anime: NextPage = ({
 						height="920"
 						layout="responsive"
 					/>
-					<div className="absolute top-[30vh] left-[20vw] w-[60vw] h-[90vh] bg-gray-800">
+					<div className="absolute top-[30vh] left-[20vw] w-[60vw] h-[90vh] bg-gray-900">
 						<div className="absolute top-[2vh] left-[20vw] w-[40vw] h-[20vh]">
 							<h1 className="font-extrabold text-6xl">{data.name}</h1>
 							<h4 className="">by: {data.author}</h4>
@@ -67,4 +67,4 @@ const Anime: NextPage = ({
 	);
 };
 
-export default Anime;
+export default Theme;

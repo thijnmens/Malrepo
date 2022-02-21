@@ -15,7 +15,7 @@ declare global {
 const download = (x: number) => {
 	if (x === 0) {
 		return (
-			<Link passHref href={`/download`}>
+			<Link passHref href={`https://www.youtube.com/watch?v=dQw4w9WgXcQ`}>
 				<button className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-xl p-3 hover:bg-gradient-to-l transition-all ease-in-out duration-250 hover:scale-105 translate-y-[45%]">
 					Download
 				</button>
@@ -23,11 +23,9 @@ const download = (x: number) => {
 		);
 	} else {
 		return (
-			<Link passHref href={`/download`}>
-				<button className="bg-gradient-to-r from-gray-600 to-gray-700 rounded-xl p-3 translate-y-[45%]">
-					<Image src="/Eclipse-1s-200px.svg" alt="" layout="fill" />
-				</button>
-			</Link>
+			<button className="bg-gradient-to-r from-gray-600 to-gray-700 rounded-xl p-3 translate-y-[45%] cursor-not-allowed">
+				<Image src="/Eclipse-1s-200px.svg" alt="" layout="fill" />
+			</button>
 		);
 	}
 };

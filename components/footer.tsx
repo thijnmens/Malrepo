@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Footer = () => {
 	return (
-		<footer className="bg-gray-800 text-gray-300">
+		<footer className="fixed bottom-0 left-0 w-screen bg-gray-800 text-gray-300">
 			<div className="flex flex-auto flex-row text-center">
 				<div className="max-w-3xl mx-auto p-5">© {new Date().getFullYear()} Malrepo</div>
 				<div className="max-w-3xl mx-auto p-5">
