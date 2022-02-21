@@ -41,7 +41,7 @@ const Anime: NextPage = ({
 							<h1 className="font-extrabold text-6xl">{data.name}</h1>
 							<h4 className="">by: {data.author}</h4>
 							<br />
-							<Link href={`/download?id=${router.query.id}`}>
+							<Link passHref href={`/download?id=${router.query.id}`}>
 								<button className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-xl p-3 hover:bg-gradient-to-l transition-all ease-in-out duration-250 hover:scale-105">
 									Download
 								</button>
