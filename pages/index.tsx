@@ -24,7 +24,7 @@ const Home: NextPage = ({ data }: InferGetServerSidePropsType<typeof getServerSi
 export default Home;
 
 export const getServerSideProps: GetServerSideProps = async (context: any) => {
-	const res = await fetch(`https://api.thomasgamer.nl/themes/all/${context.params?.page || 0}`);
+	const res = await fetch(`https://api.malrepo.net/themes/all/${context.params?.page || 0}`);
 	const data = await res.json();
 
 	return { props: { data } };

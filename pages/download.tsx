@@ -25,7 +25,7 @@ const download = (x: number) => {
 		return (
 			<Link passHref href={`/download`}>
 				<button className="bg-gradient-to-r from-gray-600 to-gray-700 rounded-xl p-3 translate-y-[45%]">
-					<Image src="/Eclipse-1s-200px.svg" layout="fill" />
+					<Image src="/Eclipse-1s-200px.svg" alt="" layout="fill" />
 				</button>
 			</Link>
 		);

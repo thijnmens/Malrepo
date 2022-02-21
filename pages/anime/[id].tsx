@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export const getServerSideProps: GetServerSideProps = async (context: any) => {
-	const resdata = await fetch(`https://api.thomasgamer.nl/themes/get/${context.params.id}`);
-	const resfile = await fetch(`https://api.thomasgamer.nl/themes/download/${context.params.id}`);
+	const resdata = await fetch(`https://api.malrepo.net/themes/get/${context.params.id}`);
+	const resfile = await fetch(`https://api.malrepo.net/themes/download/${context.params.id}`);
 	const jsondata = await resdata.json();
 	const jsonfile = await resfile.json();
 
