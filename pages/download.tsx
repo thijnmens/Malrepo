@@ -36,7 +36,7 @@ const Download: NextPage = () => {
 		<div>
 			<Head>
 				<title>Download is ready in {time}</title>
-				<script
+				{/*<script
 					async
 					custom-element="amp-auto-ads"
 					src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"
@@ -45,7 +45,7 @@ const Download: NextPage = () => {
 					async
 					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4713306956805377"
 					crossOrigin="anonymous"
-				></script>
+				></script>*/}
 			</Head>
 
 			<main>
@@ -58,10 +58,10 @@ const Download: NextPage = () => {
 					</div>
 				</div>
 				<div className="h-[20vh]">
-					<amp-auto-ads
+					{/*<amp-auto-ads
 						type="adsense"
 						data-ad-client="ca-pub-4713306956805377"
-					></amp-auto-ads>
+					></amp-auto-ads>*/}
 				</div>
 			</main>
 
