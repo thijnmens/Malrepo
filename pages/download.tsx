@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import useTimer from '../hooks/useTimer';
+import { Adsense } from '@ctrl/react-adsense';
 
 declare global {
 	namespace JSX {
@@ -24,7 +25,7 @@ const download = (x: number) => {
 	} else {
 		return (
 			<button className="bg-gradient-to-r from-gray-600 to-gray-700 rounded-xl p-3 translate-y-[45%] cursor-not-allowed">
-				<Image src="/Eclipse-1s-200px.svg" alt="" layout="fill" />
+				<Image src="https://api.malrepo.net/spinner" alt="" layout="fill" />
 			</button>
 		);
 	}
@@ -36,16 +37,11 @@ const Download: NextPage = () => {
 		<div>
 			<Head>
 				<title>Download is ready in {time}</title>
-				{/*<script
-					async
-					custom-element="amp-auto-ads"
-					src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"
-				></script>
 				<script
 					async
 					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4713306956805377"
 					crossOrigin="anonymous"
-				></script>*/}
+				></script>
 			</Head>
 
 			<main>
@@ -57,12 +53,7 @@ const Download: NextPage = () => {
 						{download(time)}
 					</div>
 				</div>
-				<div className="h-[20vh]">
-					{/*<amp-auto-ads
-						type="adsense"
-						data-ad-client="ca-pub-4713306956805377"
-					></amp-auto-ads>*/}
-				</div>
+				<Adsense client="ca-pub-4713306956805377" slot="1375567368" />
 			</main>
 
 			<footer></footer>
