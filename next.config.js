@@ -5,6 +5,7 @@ const nextConfig = {
 		locales: ['en'],
 		defaultLocale: 'en',
 	},
+	images: { domains: ['api.malrepo.net'] },
 };
 
 module.exports = nextConfig;

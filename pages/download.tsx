@@ -5,14 +5,6 @@ import Link from 'next/link';
 import useTimer from '../hooks/useTimer';
 import { Adsense } from '@ctrl/react-adsense';
 
-declare global {
-	namespace JSX {
-		interface IntrinsicElements {
-			[elemName: string]: any;
-		}
-	}
-}
-
 const download = (x: number) => {
 	if (x === 0) {
 		return (
@@ -53,7 +45,17 @@ const Download: NextPage = () => {
 						{download(time)}
 					</div>
 				</div>
-				<Adsense client="ca-pub-4713306956805377" slot="1375567368" />
+				<div>
+					<div className="fixed bottom-[20vh] text-center">
+						<Adsense
+							className="bg-purple-900"
+							client="ca-pub-4713306956805377"
+							slot="1375567368"
+							style={{ display: 'block' }}
+							format="fluid"
+						/>
+					</div>
+				</div>
 			</main>
 
 			<footer></footer>
