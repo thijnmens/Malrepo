@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import { Helmet } from 'react-helmet';
 
 const Document = () => {
 	return (
@@ -15,7 +16,7 @@ const Document = () => {
 				</script>
 				<script
 					src="https://contextual.media.net/dmedianet.js?cid=8CU8IT8AJ"
-					async
+					async="async"
 				></script>
 			</Head>
 			<body>
