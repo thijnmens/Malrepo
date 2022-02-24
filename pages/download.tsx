@@ -5,6 +5,13 @@ import Link from 'next/link';
 import useTimer from '../hooks/useTimer';
 import { Adsense } from '@ctrl/react-adsense';
 
+declare global {
+	interface Window {
+		_mNHandle: any;
+		_mNDetails: any;
+	}
+}
+
 const download = (x: number) => {
 	if (x === 0) {
 		return (
@@ -54,6 +61,15 @@ const Download: NextPage = () => {
 							style={{ display: 'block' }}
 							format="fluid"
 						/>
+						<div id="734157883">
+							<script type="text/javascript">
+								try{' '}
+								{window._mNHandle.queue.push(function () {
+									window._mNDetails.loadTag('734157883', '728x90', '734157883');
+								})}
+								catch (error) {}
+							</script>
+						</div>
 					</div>
 				</div>
 			</main>
