@@ -3,15 +3,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import useTimer from '../hooks/useTimer';
-import { Adsense } from '@ctrl/react-adsense';
-import MediaNetAds from '../components/medianetAds';
-
-declare global {
-	interface Window {
-		_mNHandle: any;
-		_mNDetails: any;
-	}
-}
 
 const download = (x: number) => {
 	if (x === 0) {
@@ -37,11 +28,6 @@ const Download: NextPage = () => {
 		<div>
 			<Head>
 				<title>Download is ready in {time}</title>
-				<script
-					async
-					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4713306956805377"
-					crossOrigin="anonymous"
-				></script>
 			</Head>
 
 			<main>
@@ -51,18 +37,6 @@ const Download: NextPage = () => {
 							Your download will be ready in <strong>{time}</strong> seconds
 						</h1>
 						{download(time)}
-					</div>
-				</div>
-				<div>
-					<div className="fixed bottom-[20vh] text-center">
-						<Adsense
-							className="bg-purple-900"
-							client="ca-pub-4713306956805377"
-							slot="1375567368"
-							style={{ display: 'block' }}
-							format="fluid"
-						/>
-						<MediaNetAds id="734157883" size="728x90" />
 					</div>
 				</div>
 			</main>
